@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_line_start"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_line_end"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp"
+        />
+
+    <TextView
+        android:id="@+id/passenger_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Passenger"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/logo_iv"
+        app:layout_constraintStart_toEndOf="@id/guide_line_start"
+        android:layout_marginTop="20dp"
+        app:layout_goneMarginTop="120dp"
+        />
+
+    <TextView
+        android:id="@+id/passenger_tv"
+        android:text="DenDen DonDon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/logo_iv"
+        app:layout_constraintStart_toEndOf="@id/passenger_label_tv"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        app:layout_goneMarginTop="120dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/logo_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/guide_line_start"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/banner_iv"
+        android:layout_width="0dp"
+        android:layout_height="275dp"
+        android:src="@drawable/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passenger_label_tv"
+        />
+
+    <LinearLayout
+        android:id="@+id/depart_info_ll"
+        android:layout_width="165dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/guide_line_start"
+        app:layout_constraintTop_toTopOf="@id/banner_iv"
+        app:layout_constraintBottom_toBottomOf="@id/banner_iv"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:gravity="start"
+        >
+
+        <TextView
+            android:id="@+id/airport_dep_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JFK"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/city_dep_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEW YORK CITY"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:id="@+id/depart_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEPART"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/time_dep_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8:00 AM"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/arrive_info_ll"
+        android:layout_width="165dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/depart_info_ll"
+        app:layout_constraintTop_toTopOf="@id/banner_iv"
+        app:layout_constraintBottom_toBottomOf="@id/banner_iv"
+        app:layout_constraintEnd_toStartOf="@id/guide_line_end"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:gravity="end"
+        >
+
+
+        <TextView
+            android:id="@+id/airport_arr_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEA"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/city_arr_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEATTLE"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/arrive_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ARRIVE"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/time_arr_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11:30 AM"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/qr_code_iv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/qrcode"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide_line_end"
+        android:layout_marginBottom="40dp"
+        />
+
+    <android.support.constraint.helper.Flow
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="boarding_time_label_tv,fight_label_tv,boarding_time_tv,flight_number_tv"
+        app:layout_constraintTop_toBottomOf="@+id/banner_iv"
+        app:layout_constraintStart_toEndOf="@id/guide_line_start"
+        app:layout_constraintEnd_toEndOf="@id/guide_line_end"
+        app:layout_constraintBottom_toTopOf="@id/qr_code_iv"
+        app:flow_wrapMode="chain"
+        />
+
+    <TextView
+        android:id="@+id/boarding_time_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BOARDING BEGINS"
+        android:background="@color/purple_200"/>
+
+    <TextView
+        android:id="@+id/fight_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLIGHT"
+        android:background="@color/purple_200"
+        />
+
+    <TextView
+        android:id="@+id/boarding_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7:30 AM"
+        android:background="@color/purple_200"
+        android:textSize="30sp"
+        />
+    <TextView
+        android:id="@+id/flight_number_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="D2230"
+        android:background="@color/purple_200"
+        android:textSize="30sp"
+        />
+
+
+
+</android.support.constraint.ConstraintLayout>
