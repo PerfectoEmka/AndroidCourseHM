@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">HW1ConstrLinearFlow</string>
+    <string name="dep_airport">JFK</string>
+    <string name="arr_airport">SEA</string>
+    <string name="dep_label">DEPART</string>
+    <string name="arr_label">ARRIVE</string>
+    <string name="passenger_label">Passenger</string>
 </resources>
